@@ -13,6 +13,14 @@ class main{
         system::printPage($table);
     }
 }
+class csv
+{
+    static public function getRecords($filename)
+    {
+        $file =fopen($filename,'r');
+        $fields = array();
+        $count = 0;
+        while(! feof($file))
 
 
 

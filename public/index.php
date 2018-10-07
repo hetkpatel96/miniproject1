@@ -54,8 +54,13 @@ class record{
 }
 
 
-class recordFactory{
-
+class recordFactory
+{
+    public static function create (array $fieldNames=null , array $value=null)
+    {
+        $record =new record ($fieldNames,$value);
+        return $record;
+    }
 }
 
 ?>

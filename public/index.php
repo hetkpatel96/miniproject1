@@ -92,6 +92,9 @@ class html
             }
             $html .= '</tr>';
         }
+        // finish table and return it
+        $html .= '</table>';
+        return $html;
     }
 }
 

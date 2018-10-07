@@ -37,8 +37,13 @@ class csv
     }
 }
 class record{
-    public function __construct(Array $fieldNames = null, Array $value = null){
-        
+    public function __construct(Array $fieldNames = null, Array $value = null)
+    {
+        $record = array_combine($fieldNames, $value);
+        foreach ($record as $property => $value)
+        {
+            $this->createProperty($property, $value);
+        }
     }
 }
 

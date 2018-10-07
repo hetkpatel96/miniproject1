@@ -45,7 +45,12 @@ class record{
             $this->createProperty($property, $value);
         }
     }
+    public function createProperty($name, $value)
+    {
+        
+    }
 }
+
 
 class recordFactory{
 

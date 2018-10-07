@@ -36,6 +36,12 @@ class csv
         return $records;
     }
 }
+class record{
 
+}
+
+class recordFactory{
+    
+}
 
 ?>

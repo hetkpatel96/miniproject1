@@ -17,10 +17,13 @@ class csv
 {
     static public function getRecords($filename)
     {
-        $file =fopen($filename,'r');
-        $fields = array();
-        $count = 0;
-        while(! feof($file))
+        public function __construct(Array $fieldNames = null, Array $value = null)
+    {
+        $record = array_combine($fieldNames, $value);
+        foreach ($record as $property => $value) {
+            $this->createProperty($property, $value);
+        }
+    }
 
         {
             $record = fgetcsv($file);

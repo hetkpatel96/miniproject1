@@ -37,11 +37,13 @@ class csv
     }
 }
 class record{
-
+    public function __construct(Array $fieldNames = null, Array $value = null){
+        
+    }
 }
 
 class recordFactory{
-    
+
 }
 
 ?>

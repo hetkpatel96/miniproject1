@@ -5,7 +5,7 @@
  * Date: 9/25/18
  * Time: 9:34 PM
  */
-main::start('example.csv');
+main::start('sample.csv');
 class main{
     static public function start($filename){
         $records = csv::getRecords($filename);

@@ -22,6 +22,20 @@ class csv
         $count = 0;
         while(! feof($file))
 
-
+        {
+            $record = fgetcsv($file);
+            if ($count == 0) {
+                $fields = $record;
+            }
+            else
+            {
+                $records[] = recordFactory::create($fields, $record);
+            }
+            $count++;
+        }
+        fclose($file);
+        return $records;
+    }
+}
 
 ?>

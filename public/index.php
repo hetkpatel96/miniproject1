@@ -47,7 +47,9 @@ class record{
     }
     public function createProperty($name, $value)
     {
-        
+        $this->{$name} = $value;
+        $name = '<th>' . $name . '</th>';
+        $value = '<td>' . $value . '</td>';
     }
 }
 
